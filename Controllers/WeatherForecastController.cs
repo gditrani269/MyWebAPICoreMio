@@ -54,6 +54,7 @@ namespace MyWebAPICoreMio.Controllers
         [HttpGet ("{id}")]
         public ActionResult<String> Get(int id)
         {
+            Console.WriteLine("Hello from Mac");
             return "test" + id.ToString () ;
         }
 
