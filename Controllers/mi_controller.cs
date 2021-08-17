@@ -60,6 +60,7 @@ namespace MyWebAPICoreMio.Controllers
         [HttpGet ("{id}")]
         public ActionResult<String> Get(int id)
         {
+            Console.WriteLine("Hello from Mac");
             string sSalida = "";
             var builder = new ConfigurationBuilder()
                .AddJsonFile($"appsettings.json", true, true);
