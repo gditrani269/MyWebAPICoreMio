@@ -25,6 +25,7 @@ namespace MyWebAPICoreMio.Controllers
 
         private static readonly string[] Summaries = new[]
         {
+            Console.WriteLine("configuration");
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
@@ -38,6 +39,7 @@ namespace MyWebAPICoreMio.Controllers
         [HttpGet]
         public IEnumerable<mi_controller> Get()
         {
+            Console.WriteLine("HttpGet");
             var rng = new Random();
             //var sDar = configuration.GetValue<string>("ConnectionStrings:Default");
               var builder = new ConfigurationBuilder()
@@ -60,7 +62,7 @@ namespace MyWebAPICoreMio.Controllers
         [HttpGet ("{id}")]
         public ActionResult<String> Get(int id)
         {
-            Console.WriteLine("Hello from Mac");
+            Console.WriteLine("HttpGet id");
             string sSalida = "";
             var builder = new ConfigurationBuilder()
                .AddJsonFile($"appsettings.json", true, true);
