@@ -25,7 +25,6 @@ namespace MyWebAPICoreMio.Controllers
 
         private static readonly string[] Summaries = new[]
         {
-            Console.WriteLine("configuration");
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
