@@ -55,6 +55,7 @@ namespace MyWebAPICoreMio.Controllers
         public ActionResult<String> Get(int id)
         {
             Console.WriteLine("Hello from Mac");
+            Console.WriteLine(Environment.GetEnvironmentVariable("TEST_NETCORE"));
             return "test" + id.ToString ();
         }
 
