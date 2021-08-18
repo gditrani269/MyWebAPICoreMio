@@ -55,7 +55,7 @@ namespace MyWebAPICoreMio.Controllers
         public ActionResult<String> Get(int id)
         {
             Console.WriteLine("Hello from Mac");
-            return "test" + id.ToString () + " aca toy: " + Environment.GetEnvironmentVariable("TEST_NETCORE");
+            return "test" + id.ToString ();
         }
 
         [HttpGet ("/{id2}")]
