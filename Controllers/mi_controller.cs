@@ -88,6 +88,7 @@ namespace MyWebAPICoreMio.Controllers
              } else {
                 return connectionString;
             }
+/*  coneccion a SQL Server
 
             connectionString = config["ConnectionStrings:DefaultSQLServer"];
             sSalida = sSalida + connectionString;
@@ -101,7 +102,7 @@ namespace MyWebAPICoreMio.Controllers
                     sSalida = sSalida + rdr[1].ToString();
                     sSalida = sSalida + rdr[2].ToString();
                 }       
-            }
+            } */
             return sSalida;
         }
 
