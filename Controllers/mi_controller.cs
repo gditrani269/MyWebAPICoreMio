@@ -80,6 +80,7 @@ namespace MyWebAPICoreMio.Controllers
                     while (reader.Read()){
                         Console.WriteLine("esta en el while");
                         sSalida = sSalida + reader["last_name"].ToString();
+                        Console.WriteLine("ejecuto reader");
                     }
                 }
              } else {
