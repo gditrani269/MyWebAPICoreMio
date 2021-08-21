@@ -70,11 +70,15 @@ namespace MyWebAPICoreMio.Controllers
             var connectionString = Environment.GetEnvironmentVariable("TEST_NETCORE");//config["ConnectionStrings:Default"];
             Console.WriteLine(connectionString);
             using var connection = new MySqlConnection(connectionString);
+            Console.WriteLine("connection");
             connection.Open();
             if (connection!=null) {
+                Console.WriteLine("la conection no es null");
                 using var command = new MySqlCommand("SELECT * FROM employees;", connection);
+                Console.WriteLine("tiro el select");
                 using (var reader = command.ExecuteReader()) {
                     while (reader.Read()){
+                        Console.WriteLine("esta en el while");
                         sSalida = sSalida + reader["last_name"].ToString();
                     }
                 }
