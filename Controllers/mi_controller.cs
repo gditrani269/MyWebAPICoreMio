@@ -68,6 +68,7 @@ namespace MyWebAPICoreMio.Controllers
 
             var config = builder.Build();
             var connectionString = Environment.GetEnvironmentVariable("TEST_NETCORE");//config["ConnectionStrings:Default"];
+            Console.WriteLine(connectionString);
             using var connection = new MySqlConnection(connectionString);
             connection.Open();
             if (connection!=null) {
